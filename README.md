@@ -1,16 +1,20 @@
 Coroutine Manager.
 
+Kill coroutines instantly. 
+
 Declare;
 
-    private Job conversationInProgress;
+private Job thiscoroutine;
 
 Kill:
 
-    if (conversationInProgress != null) conversationInProgress.Kill();
+if (thiscoroutine != null) thiscoroutine.Kill();
 
 Enable:
 
-			conversationInProgress = new Job(ConversationDo(startIndex));
+thiscoroutine = new Job(thiscoroutine());
+
+(Job is an IEnumerator)
       
       
 
